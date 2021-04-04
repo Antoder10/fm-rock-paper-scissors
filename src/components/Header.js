@@ -4,7 +4,7 @@ import logo from '../images/logo.svg';
 
 const Header = ({score}) => {
   return (
-    <div className="flex flex-row justify-between rounded-md border-2 border-gray-500 mt-8 p-6">
+    <div className="flex flex-row w-full justify-between rounded-lg border-2 border-gray-500 px-6 py-4">
       <img src={logo} alt="Rock Paper Scissors" />
       <div className="flex flex-col items-center justify-center bg-white rounded-md px-12">
         <span className="uppercase">score</span>

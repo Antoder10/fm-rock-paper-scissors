@@ -1,18 +1,22 @@
 import React from 'react';
 
-import scissors from '../images/icon-scissors.svg';
+import {ReactComponent as Scissors} from '../images/icon-scissors.svg';
+import {ReactComponent as Rock} from '../images/icon-rock.svg';
+import {ReactComponent as Paper} from '../images/icon-paper.svg';
 
 const Button = ({type, handleClick}) => {
   return (
-    <>
-    <button
+    <div
       className={`bg-white rounded-full p-16 border-24 border-${type} w-16 h-16`}
-      name={type}
       onClick={e => handleClick(e)}
+      id={type}
     >
-      <div className={`bg-${type}-img bg-cover bg-no-repeat w-16 h-16`}/>
-    </button>
-    </>
+      {
+        (type === 'scissors' && <Scissors />) ||
+        (type === 'rock' && <Rock />) ||
+        (type === 'paper' && <Paper />)
+      }
+    </div>
   )
 }
 
